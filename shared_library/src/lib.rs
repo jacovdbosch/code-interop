@@ -13,5 +13,5 @@ pub extern "C" fn create_person(name: *const c_char) -> Person {
 #[no_mangle]
 pub extern "C" fn print_person(person: Person) {
     let c_str = unsafe { CStr::from_ptr(person.name) };
-    println!("Hello, Sailor {}", c_str.to_str().unwrap());
+    println!("hoi hoe gaat het, {}", c_str.to_str().unwrap());
 }
